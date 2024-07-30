@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <script type="text/javascript"
-            src="https://maps.googleapis.com/maps/api/js">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
         </script>
 
         <script type="text/javascript">
@@ -32,7 +32,7 @@
                 document.getElementById('longitude').value = location.lng();
             }
         </script>
-        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}" />
+        <link type="text/css" rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}">
     </head>
     <body onload="initialize()">
 
