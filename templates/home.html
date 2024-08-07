@@ -2,6 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Crime Map</title>
         <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js">
         </script>
 
@@ -51,13 +53,16 @@
 
         <h1>CrimeMap</h1>
         <p>A map of recent criminal activity in the 
-        Grahamstown area.</p>
+        Covenant University area.</p>
         <div id="map-canvas">
 
         </div>
 
         <div id="newcrimeform">
             <h2>Submit new crime</h2>
+            {% if error_message %}
+                <div id="error"><p>{{error_message}}</p></div>
+            {% endif %}
             <form action="/submitcrime" method="POST">
                 <label for="category">Category</label>
                 <select name="category" id="category">
